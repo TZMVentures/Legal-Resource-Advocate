@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+}
+
+header{
+background:#1b5e20;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+background:#2e7d32;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:15px 20px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#1b5e20;
+}
+
+.container{
+width:95%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+border-left:8px solid #2e7d32;
+border-radius:8px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.card h2{
+margin-bottom:15px;
+color:#2e7d32;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #bbb;
+border-radius:5px;
+}
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:5px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+.status{
+display:inline-block;
+padding:8px 15px;
+border-radius:20px;
+background:#e8f5e9;
+color:#2e7d32;
+font-weight:bold;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table th{
+background:#2e7d32;
+color:white;
+padding:12px;
+}
+
+table td{
+padding:12px;
+border-bottom:1px solid #ddd;
+}
+
+.footer{
+background:#424242;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Client Portal</h1>
+<p>Secure Client Management Dashboard</p>
+</header>
+
+<nav>
+<a href="#login">Login</a>
+<a href="#profile">Profile</a>
+<a href="#documents">Documents</a>
+<a href="#communication">Communication</a>
+<a href="#invoice">Invoices</a>
+<a href="#email">Email</a>
+</nav>
+
+<div class="container">
+
+<section class="card" id="login">
+<h2>Client Login</h2>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+<p style="margin-top:15px;">
+Status:
+<span class="status">Secure Login Enabled</span>
+</p>
+
+</section>
+
+<section class="card" id="profile">
+
+<h2>Client Profile</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Name</label>
+<input placeholder="Client Name">
+
+<label>Company</label>
+<input placeholder="Company">
+
+<label>Email</label>
+<input placeholder="Email">
+
+<label>Phone</label>
+<input placeholder="Phone">
+
+</div>
+
+<div>
+
+<label>Address</label>
+<textarea rows="8"></textarea>
+
+<button>Save Profile</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card" id="documents">
+
+<h2>Document Management</h2>
+
+<h3>Upload Documents</h3>
+
+<input type="file">
+
+<button>Upload File</button>
+
+<hr style="margin:30px 0;">
+
+<h3>Electronic Signature</h3>
+
+<select>
+
+<option>Select Document</option>
+
+<option>Service Agreement</option>
+
+<option>Contract</option>
+
+<option>Invoice Approval</option>
+
+</select>
+
+<button>Sign Document</button>
+
+</section>
+
+<section class="card" id="communication">
+
+<h2>Client Communications</h2>
+
+<textarea rows="6" placeholder="Send secure message"></textarea>
+
+<button>Send Message</button>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Message</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>08/05/2026</td>
+
+<td>Welcome to the Client Portal</td>
+
+<td>Delivered</td>
+
+</tr>
+
+<tr>
+
+<td>08/04/2026</td>
+
+<td>Document Uploaded</td>
+
+<td>Read</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="card" id="invoice">
+
+<h2>Invoices</h2>
+
+<table>
+
+<tr>
+
+<th>Invoice</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+<tr>
+
+<td>#1001</td>
+
+<td>$250.00</td>
+
+<td>Paid</td>
+
+<td><button>View</button></td>
+
+</tr>
+
+<tr>
+
+<td>#1002</td>
+
+<td>$125.00</td>
+
+<td>Pending</td>
+
+<td><button>Pay</button></td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="card" id="email">
+
+<h2>Email Saving Integrations</h2>
+
+<p>
+Connect your preferred email platform to automatically save communications to the client record.
+</p>
+
+<div class="grid">
+
+<div>
+
+<h3>Microsoft Outlook</h3>
+
+<button>Connect</button>
+
+</div>
+
+<div>
+
+<h3>Google Gmail</h3>
+
+<button>Connect</button>
+
+</div>
+
+<div>
+
+<h3>Microsoft 365</h3>
+
+<button>Connect</button>
+
+</div>
+
+<div>
+
+<h3>IMAP Mail</h3>
+
+<button>Connect</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Dashboard Summary</h2>
+
+<div class="grid">
+
+<div>
+
+<h3>Clients</h3>
+
+<h1>154</h1>
+
+</div>
+
+<div>
+
+<h3>Documents</h3>
+
+<h1>482</h1>
+
+</div>
+
+<div>
+
+<h3>Messages</h3>
+
+<h1>96</h1>
+
+</div>
+
+<div>
+
+<h3>Invoices</h3>
+
+<h1>$18,640</h1>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<div class="footer">
+© 2026 Client Portal | Secure Business Dashboard
+</div>
+
+<script>
+
+document.querySelectorAll("button").forEach(button=>{
+
+button.addEventListener("click",function(){
+
+alert("This feature is ready for backend integration.");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
