@@ -10,20 +10,39 @@
 <h1>Contact Us</h1>
 </header>
 
-<form class="contact-form">
+<form
+action="https://formspree.io/f/mzerkjlj"
+method="POST">
 
-<input type="text" placeholder="Name" required>
+    <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    required>
 
-<input type="email" placeholder="Email" required>
+    <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required>
 
-<textarea placeholder="Message"></textarea>
+    <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number">
 
-<button type="submit">
-Send Message
-</button>
+    <textarea
+    name="message"
+    placeholder="How may we assist you?"
+    required></textarea>
+
+    <button type="submit">
+        Submit Inquiry
+    </button>
 
 </form>
 
 </body>
 
 </html>
+
